@@ -1,118 +1,95 @@
 \documentclass{resume} % Use the custom resume.cls style
- 
+
 \usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{setspace}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Kochur Viktor} % Your name
-% You can merge both of these into a single line, if you do not have a website.
-\address{+7 977 427 97 92 \\ Citizenship: Uzbekistan \\ Current Location: Moscow, Russia} 
-\address{\href{mailto:vitekkochur@gmail.com}{vitekkochur@gmail.com} \\ \href{https://www.linkedin.com/in/viktor-kochur-a93132180/}{LinkedIn} \\ \href{https://github.com/Bfalse123}{GitHub}}  %
- 
+
+\address{Citizenship: Uzbekistan \\ Current Location: Moscow, Russia}
+\address{\href{mailto:vitekkochur@gmail.com}{vitekkochur@gmail.com} \\ \href{https://www.linkedin.com/in/viktor-kochur-a93132180/}{LinkedIn} \\ \href{https://github.com/pivasbulba}{GitHub}}  %
+
 \begin{document}
- 
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
- 
-\begin{rSection}{Education}
- 
-{\bf MISiS University of Science and Technology}, Moscow, Russia \hfill {Sep 2019 - Jun 2023}\\
-Bachelor's in Computer Science\\
 
-{\bf DevOps Summer School HSE} Moscow, Russia \hfill {Aug 2022}\\
-Containerization and CI/CD technologies
-%Minor in Linguistics \smallskip \\
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
- 
- 
-\end{rSection}
- 
-%----------------------------------------------------------------------------------------
-% TECHINICAL STRENGTHS	
-%----------------------------------------------------------------------------------------
-\begin{rSection}{SKILLS}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Hard Skills & C/C++, Python, C\#, SQL  \\
-& Algorithms/data structures, Docker, Git, GitLab CI, TCP/IP \\
-& Linux, PostgreSQL, protobuf, Manual Testing, cmake \\ \\
-Soft Skills & Time Management, Teamwork, Communication, Stress-resistance\\
+\begin{multicols}{2}
+    \begin{minipage}{\linewidth}
+        \section*{SKILLS}
+        {\bf BACKEND} \hfill C++, Python, protobuf, gtest \\
+        {\bf DATA PIPELINES} \hfill Spark, Hadoop, Kafka, Airflow \\
+        {\bf SOFT SKILLS} \hfill Time Management, Teamwork \\
+    \end{minipage}
 
-Languages & Russian: Native, English: Advanced, French: Elementary\\
-\end{tabular}\\
-\end{rSection}
- 
- 
- 
+    \begin{minipage}{\linewidth}
+        \section*{EDUCATION}
+        {\bf MISiS University of Science and Technology}, Moscow, Russia \hfill {Sep 2019 - Jun 2023}\\
+        B.S., Information Technology\\
+        GPA: /5\\
+    \end{minipage}
+\end{multicols}
+
+{\bf DevSecOps and containerization technologies} \hfill {Nov 2022 - Dec 2022} \\
+Higher School of Economics, Moscow, Russia \\
+\href{https://drive.google.com/file/d/11NyGWnh3GeXqrwNIw-2x_bBE39JUaymN}{Credentials in Russian}
+
+%----------------------------------------------------------------------------------------
+\section*{EXPERIENCE}
+\textbf{VK | C++, Python, Big Data} \\
+Software Engineer | Dec 2022 - Present, Moscow, Russia \\
+\uline{Fuzzy search in search suggests}\\
+Goal: increase completeness of suggests engine response.
+1. Studied numerous articles and sources about Levenshtein automaton, designed and implemented one.\\
+2. Integrated new automaton technology into existing structure storing queries.\\
+\uline{Pipeline for suggests assessment}\\
+Goal: implement one click count of metrics.
+1. Gathered existing metrics in all projects related to search suggests.\\
+2. Designed and implemented a pipeline in Airflow.\\
+3. Connected all verticals to the pipeline.\\
+\uline{Fast index and multiindex}\\
+Goal: Faster delivery of new queries and increase completeness.\\
+1. Implemented fast indexer using Kafka and Spark Structured Streaming.\\
+2. Add possibility for one daemon to work with several databases.\\
+2. Add mixer of common and fast results.\\
+\textbf{Education Mentor, VK Education} \hfill Mar 2023 - May 2023 \\
+Mentor of course "Modern C++", C++ 20, Communication, Github, Code Review
+
 %----------------------------------------------------------------------------------------
 % Projects
 %----------------------------------------------------------------------------------------
-\begin{rSection}{PROJECTS}
+\begin{rSection}{EDUCATIONAL PROJECTS}
 \vspace{-1.25em}
-\item \textbf{Online photo gallery} {(PHP, HTML, MySQL)} \hfill
-\begin{itemize}
-    \itemsep -3pt {} 
-     \item Implemented an authentication system, Collected and stored data in a database.
-     \item Implemented simple HTML interface.
- \end{itemize}
- 
+
 \item \textbf{Json Parser} {(C++, STL, json)} \hfill
 \href{https://github.com/Bfalse123/jsonparser}{GitHub}
- 
+
 \item \textbf{Transport Directory} {(C++, STL, protobuf, SVG, cmake)} \hfill \href{https://github.com/Bfalse123/TransportDirectory}{GitHub}
 \begin{itemize}
-    \itemsep -3pt {} 
+    \itemsep -3pt {}
      \item Finds the quickest way from one bus station to another.
      \item Draws the whole bus routes map using SVG.
  \end{itemize}
 
  \item \textbf{Lite Python Interpreter} {(C++, STL, Python, cmake)} \hfill \href{https://github.com/Bfalse123/LitePythonInterpreter/}{GitHub}
 \begin{itemize}
-    \itemsep -3pt {} 
+    \itemsep -3pt {}
      \item Analyzes python code.
      \item Compiles this code.
  \end{itemize}
- 
- \item \textbf{Mahjong game} {(Unity, C\#, MS SQL)} \hfill
-\begin{itemize}
-    \itemsep -3pt {} 
-     \item Created a game with main menu, leader board and playing field.
-     \item Conducted manual testing of the game.
- \end{itemize}
-\end{rSection} 
- 
- 
-%----------------------------------------------------------------------------------------
-\begin{rSection}{EXPERIENCE}
- 
-\textbf{C\#/Unity Developer, HerbariumGames} \hfill Feb 2020 - July 2020 (6 months)\\
-Implemented mini-games and worked with interface. I learned teamwork and working with Git.
- 
-\end{rSection} 
- 
- 
-\begin{rSection}{Extra-Curricular Activities} 
+
+\end{rSection}
+
+
+\begin{rSection}{Extra-Curricular Activities}
 \begin{itemize}
     \item Development in C++ (5 coursers) \hfill
-    Yandex \& E-Learning Development Fund, Moscow Institute of Physics and Technology \hfill \href{https://drive.google.com/file/d/1d1d4hC7YXxu3HGqzQ9vJUY29GPHpFAra/view?usp=sharing}{Certificate} 
+    Yandex \& E-Learning Development Fund, Moscow Institute of Physics and Technology \hfill \href{https://drive.google.com/file/d/1d1d4hC7YXxu3HGqzQ9vJUY29GPHpFAra/view?usp=sharing}{Certificate}
     \item Algorithms/data structures Training \hfill Yandex
     \item "14 Days Study Plan to Crack Algo" \hfill Leetcode
-    \item Database: Basics and Theory \hfill VK Team
 \end{itemize}
- 
- 
+
+
 \end{rSection}
- 
-%------------------------
-% Use this more detailed section if you have Relevant work experience
-% keep your resume to 1 page, if you need to remove a project to display relevant experience
-% that is okay
-% ----------------------------
- 
- 
-%----------------------------------------------------------------------------------------
- 
- 
- 
+
+
 \end{document}
